@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Gmail-like banner -->
+    <LinearLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2868de"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/inboxIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/email"
+            android:contentDescription="Inbox Icon" />
+
+        <TextView
+            android:id="@+id/bannerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INBOX"
+            android:textColor="#FFF"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/emailRecyclerVIew"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginBottom="20dp"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:id="@+id/newEmailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_gravity="end|bottom"
+        android:onClick="newEmail"
+        android:text="New Email" />
+
+</LinearLayout>
